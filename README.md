@@ -6,7 +6,7 @@ tasks for dealing with a SQL database using the [ActiveRecord ORM](http://api.ru
 
 Install the `sinatra-activerecord` gem along with one of the database adapters:
 
-    sudo gem install activerecord sinatra-sequel
+    sudo gem install activerecord sinatra-activerecord
     sudo gem install sqlite3
     sudo gem install mysql
     sudo gem install postgres
@@ -50,7 +50,7 @@ the following code in about anywhere and it'll work just fine:
     # environment variable or the default sqlite://<environment>.db as the connection string:
     set :database, 'sqlite://foo.db'
 
-    # At this point, you can access the Sequel Database object using the
+    # At this point, you can access the ActiveRecord::Base class using the
     # "database" object:
     puts "the foos table doesn't exist" if !database.table_exists?('foos')
 
