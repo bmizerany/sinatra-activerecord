@@ -70,6 +70,10 @@ the following code in about anywhere and it'll work just fine:
       erb :foos
     end
 
+### NOTE about the rip-off
+
+  This Code and README.md is a heavy adaption of [rtomayko's sinatra-sequel](http://github.com/rtomayko/sinatra-sequel/)
+
 Copyright (c) 2009 Blake Mizerany
 
 Permission is hereby granted, free of charge, to any person
