@@ -31,21 +31,22 @@ module Sinatra
 
     def database_options
       url = URI(database_url)
-      if url.scheme == "sqlite"
-        {
-          :adapter => "sqlite3",
-          :database => url.host
-        }
-      else
-        {
-          :adapter => url.scheme,
-          :host => url.host,
-          :port => url.port,
-          :database => url.path[1..-1],
-          :username => url.user,
-          :password => url.password
-        }
-      end.merge(database_extras)
+      options = {
+        :adapter => url.scheme,
+        :host => url.host,
+        :port => url.port,
+        :database => url.path[1..-1],
+        :username => url.user,
+        :password => url.password
+      }
+      case url.scheme
+      when "sqlite"
+        options[:adapter] = "sqlite3"
+        options[:database] = url.host
+      when "postgres"
+        options[:adapter] = "postgresql"
+      end
+      options.merge(database_extras)
     end
 
     def self.registered(app)
