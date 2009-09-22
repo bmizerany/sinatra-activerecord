@@ -24,12 +24,12 @@ adding this to your `Rakefile`
 
 create a migration
 
-    $ rake db:create_migration NAME=create_users
-    $ vim db/migrate/20090922043513_create_users.rb
+    $ rake db:create_migration NAME=create_foos
+    $ vim db/migrate/20090922043513_create_foos.rb
 
-    class CreateUsers < ActiveRecord::Migration
+    class CreateFoos < ActiveRecord::Migration
       def self.up
-        create_table :users do |t|
+        create_table :foos do |t|
           t.string :name
         end
       end
@@ -58,7 +58,7 @@ the following code in about anywhere and it'll work just fine:
     puts "the foos table doesn't exist" if !database.table_exists?('foos')
 
     # models just work ...
-    class User < ActiveRecord::Base
+    class Foo < ActiveRecord::Base
     end
 
     # see:
