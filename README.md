@@ -6,7 +6,8 @@ tasks for dealing with a SQL database using the [ActiveRecord ORM](http://api.ru
 
 Install the `sinatra-activerecord` gem along with one of the database adapters:
 
-    sudo gem install activerecord sinatra-activerecord
+    sudo gem install activerecord
+    sudo gem install sinatra-activerecord -s http://gems.gemcutter.org
     sudo gem install sqlite3
     sudo gem install mysql
     sudo gem install postgres
