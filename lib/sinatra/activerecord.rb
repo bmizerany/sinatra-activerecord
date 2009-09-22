@@ -1,7 +1,7 @@
 require 'uri'
 require 'time'
 require 'sinatra/base'
-require 'activerecord'
+require 'active_record'
 require 'logger'
 
 module Sinatra
