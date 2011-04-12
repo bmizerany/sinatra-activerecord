@@ -24,10 +24,12 @@ In terminal, test that it works
     rake db:create_migration  # create an ActiveRecord migration in ./db/migrate
     rake db:migrate           # migrate your database
 
-create a migration
+Now you can create a migration
 
     $ rake db:create_migration NAME=create_foos
     $ vim db/migrate/20090922043513_create_foos.rb
+
+Which should result in
 
     class CreateFoos < ActiveRecord::Migration
       def self.up
