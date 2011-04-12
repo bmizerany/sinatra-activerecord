@@ -27,7 +27,6 @@ In terminal, test that it works
 Now you can create a migration
 
     $ rake db:create_migration NAME=create_foos
-    $ vim db/migrate/20090922043513_create_foos.rb
 
 This will create a migration file in ./db/migrate, ready for editing
 
