@@ -39,6 +39,7 @@ This will create a migration file in ./db/migrate, ready for editing
       end
 
       def self.down
+        drop_table :foos
       end
     end
 
