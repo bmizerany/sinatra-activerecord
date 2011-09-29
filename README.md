@@ -18,14 +18,17 @@ adding this to your `Rakefile`
     require 'sinatra-ar-exmple-app'
     require 'sinatra/activerecord/rake'
 
+In terminal, test that it works
+
     $ rake -T
     rake db:create_migration  # create an ActiveRecord migration in ./db/migrate
     rake db:migrate           # migrate your database
 
-create a migration
+Now you can create a migration
 
     $ rake db:create_migration NAME=create_foos
-    $ vim db/migrate/20090922043513_create_foos.rb
+
+This will create a migration file in ./db/migrate, ready for editing
 
     class CreateFoos < ActiveRecord::Migration
       def self.up
@@ -35,6 +38,7 @@ create a migration
       end
 
       def self.down
+        drop_table :foos
       end
     end
 
