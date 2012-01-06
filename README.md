@@ -1,4 +1,4 @@
-Sinatra ActiveRecord Extension
+Sinatra ActiveRecord Extension (now maintained by @holman)
 ========================
 
 Extends [Sinatra](http://www.sinatrarb.com/) with a extension methods and Rake
