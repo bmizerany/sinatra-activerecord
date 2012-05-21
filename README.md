@@ -1,5 +1,12 @@
-Sinatra ActiveRecord Extension (now maintained by @holman)
+Sinatra ActiveRecord Extension 
 ========================
+
+The official fork is now at:
+http://github.com/janko-m/sinatra-activerecord
+
+This one is now closed.
+
+---
 
 Extends [Sinatra](http://www.sinatrarb.com/) with a extension methods and Rake
 tasks for dealing with a SQL database using the [ActiveRecord ORM](http://api.rubyonrails.org/).
